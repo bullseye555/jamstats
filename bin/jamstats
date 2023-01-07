@@ -17,7 +17,7 @@ from jamstats.web import statserver
 import logging
 import sys
 from gooey import Gooey
-
+from gooey import GooeyParser
 logger = logging.Logger(__name__)
 
 logging.basicConfig(level=logging.WARNING,
