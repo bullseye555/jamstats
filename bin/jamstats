@@ -37,7 +37,7 @@ def cmdline_args():
     return parser.parse_args()
 
 def add_args(parser):
-    parser.add_argument('--jsonfile', type=argparse.FileType('r'),
+    parser.add_argument('--jsonfile', type=str, widget='FileChooser',
                         help="Scoreboard JSON file to read. If this argument is specified, will read from a file. Either this or scoreboardserver must be specified.")
     parser.add_argument('--scoreboardserver', type=str,
                         help="server:port to connect to, e.g., localhost:8000. If this argument is specified, will connect to a server. Either this or jsonfile must be specified")
